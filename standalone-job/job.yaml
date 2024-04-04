@@ -9,6 +9,10 @@ spec:
     spec:
       containers:
       - name: jobtest
-        image: busybox
-        command: ["sleep", "180"] 
+        image: ghcr.io/yteraoka/diag-tools:0.5.0
+        command:
+          - sh
+          - -c
+        args:
+          - "echo begin; sleep 30; echo end"
       restartPolicy: Never
