@@ -14,5 +14,5 @@ spec:
           - sh
           - -c
         args:
-          - "echo begin; sleep 30; echo end"
+          - "echo begin; for i in $(seq 30); do date; sleep 1; done; echo end"
       restartPolicy: Never
